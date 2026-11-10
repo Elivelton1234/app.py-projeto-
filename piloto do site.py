@@ -92,3 +92,19 @@ else:
         st.markdown('<span class="badge-urgente">PRAZO</span>', unsafe_allow_html=True)
         st.markdown("**Exame Toxicológico (1ª Habilitação)**")
         st.write("Obrigatório para processos abertos a partir de 20/06/2026 nas categorias A, B e AB com registro prévio no Renach.")
+
+        import streamlit as st
+
+st.subheader("🤖 Assistente")
+
+pergunta = st.text_input("Digite sua dúvida:")
+
+if st.button("Perguntar"):
+    if "correios" in pergunta.lower():
+        st.write("Pra Correios: 1. Vai em rastreio, 2. Pega o código, 3. Abre reclamação no site.")
+    elif "cnh" in pergunta.lower():
+        st.write("Pra CNH: 1. Entra no Detran, 2. Vê os pontos, 3. Agenda atendimento.")
+    elif "atraso" in pergunta.lower():
+        st.write("Se for atraso: anota o protocolo, tira print e abre chamado.")
+    else:
+        st.write("Ainda não sei responder isso, mas anotei sua dúvida!")
